@@ -18,17 +18,11 @@ $extensionsToInclude = array("php"); // Array of file extensions to inclue (spee
 $directoryToSearch = dirname(__FILE__); // Directory you're looking in. 
 
 
-
-
-
 ///////////////////////////////////////
 ////                               ////
 ////  DO NOT EDIT BELOW THIS LINE  ////
 ////                               ////
 ///////////////////////////////////////
-
-
-
 
 
 $directory = new RecursiveDirectoryIterator($directoryToSearch);
@@ -47,14 +41,12 @@ foreach ($iterator as $file) {
 	
 	$fileExtension = $file->getExtension();
 	
-    if($isFile && in_array($fileExtension, $extensionsToInclude) && $file != $directoryToSearch."/string_search_tool.php") {
+    if($isFile && in_array($fileExtension, $extensionsToInclude) && $file !== __FILE__) {
 	    	    
 	    foreach(new SplFileObject($file) as $lineNumber => $lineContent) {
 	    
 		    if(false !== stripos($lineContent, $searchString)) {
-			
-			    echo $filePathName . "&emsp;";
-			
+						
 			    echo "<tr><td>" . $file . "</td><td>" . ($lineNumber + 1). "</td></tr>";
     			
     			$count++;
