@@ -48,7 +48,7 @@ foreach ($iterator as $file) {
 						
 				echo "<tr><td>" . $file . "</td><td>" . ($lineNumber + 1). "</td></tr>";
     			
-    			$count++;
+				$count++;
 		
 		    }
 		
