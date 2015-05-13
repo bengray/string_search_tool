@@ -40,11 +40,11 @@ foreach ($iterator as $file) {
 	
 	$fileExtension = $file->getExtension();
 	
-	if($isFile && in_array($fileExtension, $extensionsToInclude) && $file !== __FILE__) {
+	if ($isFile && in_array($fileExtension, $extensionsToInclude) && $file !== __FILE__) {
 	    	    
-		foreach(new SplFileObject($file) as $lineNumber => $lineContent) {
+		foreach (new SplFileObject($file) as $lineNumber => $lineContent) {
 	    
-			if(false !== stripos($lineContent, $searchString)) {
+			if (false !== stripos($lineContent, $searchString)) {
 						
 				echo "<tr><td>" . $file . "</td><td>" . ($lineNumber + 1). "</td></tr>";
     			
