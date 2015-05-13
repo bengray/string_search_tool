@@ -46,7 +46,7 @@ foreach ($iterator as $file) {
 	    
 		    if(false !== stripos($lineContent, $searchString)) {
 						
-			    echo "<tr><td>" . $file . "</td><td>" . ($lineNumber + 1). "</td></tr>";
+				echo "<tr><td>" . $file . "</td><td>" . ($lineNumber + 1). "</td></tr>";
     			
     			$count++;
 		
