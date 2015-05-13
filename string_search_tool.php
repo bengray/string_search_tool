@@ -1,4 +1,5 @@
 <?php
+	
 /**
  * string_search_tool.php
  *
@@ -9,9 +10,7 @@
  *
  */
 
-
-
-$searchString = "mysql_query"; // The string you're searching for. CASE INSENSITIVE.
+$searchString = "foo"; // The string you're searching for. CASE INSENSITIVE.
 
 $extensionsToInclude = array("php"); // Array of file extensions to inclue (speeds up the search significantly)
 
@@ -58,6 +57,7 @@ foreach ($iterator as $file) {
     }
     
 }
+
 echo "String searched for: " . $searchString . "<br />";
 
 echo "Total instances of string: " . $count;
