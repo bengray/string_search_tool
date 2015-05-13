@@ -51,8 +51,8 @@ foreach ($iterator as $file) {
 				$count++;
 		
 			}
-		
-    	}
+
+			}
 
 	}
     
