@@ -52,7 +52,7 @@ foreach ($iterator as $file) {
 		
 			}
 
-			}
+		}
 
 	}
     
